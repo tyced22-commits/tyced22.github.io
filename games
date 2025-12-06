@@ -1,0 +1,49 @@
+games.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Games</title>
+    <style>
+        body {
+            background: #181818;
+            color: white;
+            text-align: center;
+            padding-top: 60px;
+            font-family: Arial;
+        }
+        .game-button {
+            background: orange;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 10px;
+            font-weight: bold;
+        }
+        iframe {
+            width: 90%;
+            height: 600px;
+            border: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Games Hub</h1>
+<p>Click a game to play:</p>
+
+<!-- Example button for Drift Boss -->
+<button class="game-button" onclick="loadGame('https://driftboss.io/')">Drift Boss</button>
+
+<iframe id="gameFrame"></iframe>
+
+<script>
+function loadGame(url) {
+    document.getElementById('gameFrame').src = url;
+}
+</script>
+
+</body>
+</html>
