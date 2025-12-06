@@ -1,0 +1,41 @@
+temp.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temporary Page</title>
+    <style>
+        body {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+            font-family: Arial, sans-serif;
+        }
+        .btn {
+            background: #00aaff;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 10px;
+            font-size: 22px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>This page will disappear after closing.</h1>
+
+<button class="btn" onclick="window.location='games.html';">
+    Go to Games
+</button>
+
+<script>
+window.onbeforeunload = () => {
+    localStorage.removeItem("temp_exists");
+};
+localStorage.setItem("temp_exists", "true");
+</script>
+
+</body>
+</html>
